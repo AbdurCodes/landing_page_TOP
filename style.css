@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 12px;
+    font-size: 24px;
+    align-items: center;
+    background-color: #1F2937;
+    color: #F9FAF8;
+}
+
+.navLinks{
+    display: flex;
+}
+
+.navLinks li {
+    margin: 0 18px;
+}
+
+.logo img{
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: yellowgreen;
+    padding: 20px;
+}
+
+a:hover{
+    color: aquamarine;
+    background-color: darkolivegreen;
+    padding: auto 0;
+}
