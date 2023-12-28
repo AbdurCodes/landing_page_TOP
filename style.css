@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    background-color: black;
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -16,10 +20,6 @@
 
 .navLinks{
     display: flex;
-}
-
-.navLinks li {
-    margin: 0 18px;
 }
 
 .logo img{
