@@ -5,6 +5,7 @@
 
 body{
     background-color: black;
+    color: #F9FAF8;
 }
 
 .navbar {
@@ -30,10 +31,57 @@ a{
     text-decoration: none;
     color: yellowgreen;
     padding: 20px;
-}
-
-a:hover{
+    
+    &:hover{
     color: aquamarine;
     background-color: darkolivegreen;
     padding: auto 0;
+    }
 }
+
+
+.heroSection{
+    background-color: #2b394d;
+    display: flex;
+    padding: 92px;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImage img{
+    border-radius: 7px;
+    border: 3px dotted rgb(29, 28, 27);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.heroImage{
+    width: 50%;
+}
+
+.heroText{
+    width: 50%;
+    padding: 32px;
+    font-size: 1.1rem;
+    
+    & h1{
+    font-size: 48px;
+    font-weight: bolder;
+    margin-bottom: 16px;
+    }
+}
+
+.heroText button{
+    background-color: #1577b9;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-weight: 800;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+
+    &:hover{
+        background-color: #084d7a;
+        cursor: pointer;
+    }
+}
+
