@@ -1,1 +1,1 @@
-# landing_page_TOP
+This is assignment about Landing page design from The Odin Project.
