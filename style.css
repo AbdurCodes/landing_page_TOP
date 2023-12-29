@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -54,9 +55,11 @@ a{
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
 }
 
+
 .heroImage{
     width: 50%;
 }
+
 
 .heroText{
     width: 50%;
@@ -69,6 +72,7 @@ a{
     margin-bottom: 16px;
     }
 }
+
 
 .heroText button{
     background-color: #1577b9;
@@ -85,3 +89,46 @@ a{
     }
 }
 
+
+.servicesSection{
+    background-color: rgb(203, 223, 223);
+    padding: 22px;
+    color: #1F2937;
+
+    & h1{
+        text-align: center;
+        margin-top: 1em;
+        font-size: 2.4em;
+    }
+}
+
+
+
+.gigs{
+    padding: 30px 153px 94px;
+    display: flex;
+    justify-content: center;
+    
+
+    & p{
+        text-align: center;
+        width: 70%;
+    }
+
+    & img{
+        border-radius: 10px;
+        border: 2px solid rgb(3, 3, 3);
+    }
+}
+
+
+
+.gig{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
