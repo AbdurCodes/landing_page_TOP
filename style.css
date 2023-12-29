@@ -94,6 +94,7 @@ a{
     background-color: rgb(203, 223, 223);
     padding: 22px;
     color: #1F2937;
+    
 
     & h1{
         text-align: center;
@@ -124,11 +125,8 @@ a{
 
 
 .gig{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
 }
