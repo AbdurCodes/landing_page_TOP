@@ -143,3 +143,45 @@ a{
         text-align: right;
     }
 }
+
+
+.actionCallSection{
+    background-color: #ffffff;
+    padding: 100px;
+
+    & .actionCall{
+        display: flex;
+        background-color: rgb(59, 59, 224);
+        padding: 58px 20px;
+        justify-content: space-around;
+        border-radius: 10px;
+
+        & h3{
+            font-size: 1.5rem;
+        }
+        & button{
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: rgb(59, 59, 224);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+
+            &:hover{
+                background-color: greenyellow;
+                color: black;
+                border: 2px solid black;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+.actionText{
+    
+    
+
+}
