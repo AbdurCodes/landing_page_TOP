@@ -130,3 +130,16 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+
+.companyGoal {
+    background-color: #084d7a;
+    padding: 122px;
+    font-size: 2rem;
+    font-style: italic;
+
+    & h6{
+        font-style: normal;
+        text-align: right;
+    }
+}
