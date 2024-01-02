@@ -180,8 +180,63 @@ a{
 }
 
 
-
 .footer{
     padding: 35px;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* About page styling */
+
+.aboutSection{
+    padding: 90px 120px 10px;
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    background-color: #1577b9;
+
+    & h1{
+        font-size: 2.6rem;
+        margin-bottom: 19px;
+        color: yellow;
+        
+    }
+
+    & p{
+        margin-bottom: 12px;
+        font-size: 1.3rem;
+    }
+}
+
+
+.aboutCall{
+    padding: 30px 120px;
+    background-color: #1577b9;
+    
+    & button{
+        font-size: 1.2rem;
+        margin: 9px;
+        padding: 12px;
+        border: none;
+        border-radius: 9px;
+        font-weight: bold;
+        border: 2px solid black;
+
+        &:hover{
+            background-color: #1577b9;;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+    }
+
+    
 }
