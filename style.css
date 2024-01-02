@@ -207,12 +207,15 @@ a{
         font-size: 2.6rem;
         margin-bottom: 19px;
         color: yellow;
-        
     }
 
     & p{
         margin-bottom: 12px;
         font-size: 1.3rem;
+    }
+
+    & img{
+        border-radius: 15px;
     }
 }
 
