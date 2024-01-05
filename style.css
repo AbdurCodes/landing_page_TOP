@@ -252,6 +252,9 @@ a{
 
 
 
+
+
+
 /* Services page styling */
 
 .services{
@@ -282,4 +285,23 @@ a{
     align-items: center;
     padding: 25px;
     width: 25%;
+}
+
+
+
+.orderServiceBtn{
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid black;
+    margin-top: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #084d7a;
+    color: whitesmoke;
+
+    &:hover{
+        background-color: #0a3b5c;
+        border: 1px solid white;
+    }
 }
