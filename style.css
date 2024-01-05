@@ -240,6 +240,40 @@ a{
             cursor: pointer;
         }
     }
+}
 
-    
+
+
+
+
+/* Services page styling */
+
+.services{
+    display: flex;
+    padding: 60px 73px 94px;
+    justify-content: center;
+    gap: 9px;
+    flex-wrap: wrap;
+    background-color: rgb(22, 21, 21);
+
+    & p{
+        text-align: center;
+        width: 100%;
+    }
+
+    & img{
+        border-radius: 10px;
+        border: 2px solid rgb(170, 160, 160);
+        margin-bottom: 8px;
+    }
+}
+
+
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 25%;
 }
