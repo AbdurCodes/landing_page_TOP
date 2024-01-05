@@ -51,13 +51,19 @@ a{
 
 .heroImage img{
     border-radius: 87px;
-    border: 3px dotted rgb(29, 28, 27);
+    border: 3px double rgb(231, 225, 219);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
 }
 
 
 .heroImage{
     width: 50%;
+}
+
+
+.softsols{
+    color: yellow;
+
 }
 
 
