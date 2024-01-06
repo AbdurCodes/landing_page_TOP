@@ -63,7 +63,7 @@ a{
 
 .softsols{
     color: yellow;
-
+  
 }
 
 
@@ -287,7 +287,16 @@ a{
     width: 25%;
 } */
 
-
+.heroImageServices{
+    height: 35vh;
+    background-color: rgb(241, 124, 144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: black;
+    font-weight: bold;
+}
 
 .orderServiceBtn{
     padding: 18px;
@@ -326,4 +335,13 @@ a{
 
 .evenGig{
     background-color: #084d7a;
+}
+
+.heroImageServices .softsols{
+    border: 2px solid black;
+    padding: 6px;
+}
+
+.heroServices{
+    text-decoration: underline;
 }
