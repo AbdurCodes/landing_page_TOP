@@ -254,38 +254,7 @@ a{
 
 
 
-
 /* Services page styling */
-
-/* .services{
-    display: flex;
-    padding: 60px 73px 94px;
-    justify-content: center;
-    gap: 9px;
-    flex-wrap: wrap;
-    background-color: rgb(22, 21, 21);
-
-    & p{
-        text-align: center;
-        width: 100%;
-    }
-
-    & img{
-        border-radius: 10px;
-        border: 2px solid rgb(170, 160, 160);
-        margin-bottom: 8px;
-    }
-} */
-
-
-/* .service{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    width: 25%;
-} */
 
 .heroImageServices{
     height: 35vh;
@@ -344,4 +313,63 @@ a{
 
 .heroServices{
     text-decoration: underline;
+}
+
+
+
+
+
+
+/* portfolio page styles */
+
+.ytChannels{
+    padding: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.portfolioWorks{
+    /* border: 1px solid white; */
+    padding: 55px;
+
+    & h2{
+        font-size: 2.3rem;
+        margin-bottom: 9px;
+        color: yellow;
+    }
+
+    & ul{
+        font-size: 1.5rem;
+
+        & li{
+            margin: 16px;
+            & a{  
+                padding: 2px;
+                color: yellowgreen;
+                &:hover{
+                    color: aquamarine;
+                    background-color: inherit;
+                }
+            }
+        }
+        
+    }
+}
+
+
+.fa-youtube{
+    color: red;
+}
+
+.fa-blogger{
+    color: orange;
+}
+
+.fa-globe{
+    color: skyblue;
+}
+
+.fa-github{
+    color: white;
 }
