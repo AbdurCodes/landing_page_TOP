@@ -322,11 +322,11 @@ a{
 
 /* portfolio page styles */
 
-.ytChannels{
+.portfolioLinks{
     padding: 55px;
     display: flex;
     justify-content: space-evenly;
-    
+    background-color: #06253a;
 }
 
 .portfolioWorks{
@@ -352,8 +352,7 @@ a{
                     background-color: inherit;
                 }
             }
-        }
-        
+        }   
     }
 }
 
@@ -372,4 +371,27 @@ a{
 
 .fa-github{
     color: white;
+}
+
+
+.reSampleVids{
+    padding: 26px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(14, 21, 26);
+
+    & legend {
+        background-color: #d40d0d;
+        color: #fff;
+        padding: 3px 16px;
+      }
+}
+
+.videoTags{
+    display: flex;
+    justify-content: space-evenly;
+
+    & iframe{
+        padding: 12px;
+    }
 }
