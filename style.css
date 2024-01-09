@@ -374,7 +374,7 @@ a{
 }
 
 
-.reSampleVids{
+.sampleVids{
     padding: 26px;
     font-weight: bold;
     font-size: 2rem;
@@ -384,6 +384,7 @@ a{
         background-color: #d40d0d;
         color: #fff;
         padding: 3px 16px;
+        text-align: center;
       }
 }
 
