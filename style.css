@@ -406,5 +406,28 @@ a{
 /* contact page styles */
 
 .contact{
-    background-color: #084d7a;
+    background-color: #182833;
+    padding: 100px;
+    display: flex;
+    justify-content: space-evenly;
+
+    & h2{
+        font-size: 2.8rem;
+    }
+
+    & p {
+        font-size: 3rem;
+
+        &:hover{
+            color: green;
+            background-color: #182833;
+            padding: 0;
+            }
+    }
+
+
+
+    
+    
+ 
 }
