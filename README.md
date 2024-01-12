@@ -1,1 +1,1 @@
-This is assignment about Landing page design from The Odin Project.
+Originally assignment about Landing page design for The Odin Project. Then transformed into a portfolio website for budding tech company called Soft Sols.
