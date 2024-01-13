@@ -189,6 +189,22 @@ a{
 .footer{
     padding: 35px;
     text-align: center;
+
+    & p{
+        margin-bottom: 5px;
+    }
+
+    & a{
+        text-decoration: none;
+        color: yellowgreen;
+        
+        
+        &:hover{
+        color: aquamarine;
+        background-color: inherit;
+        
+        }
+    }
 }
 
 
