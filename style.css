@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     color: #F9FAF8;
 }
@@ -20,28 +20,28 @@ body{
     color: #F9FAF8;
 }
 
-.navLinks{
+.navLinks {
     display: flex;
 }
 
-.logo img{
+.logo img {
     border-radius: 5px;
 }
 
-a{
+a {
     text-decoration: none;
     color: yellowgreen;
     padding: 20px;
-    
-    &:hover{
-    color: aquamarine;
-    background-color: darkolivegreen;
-    padding: auto 0;
+
+    &:hover {
+        color: aquamarine;
+        background-color: darkolivegreen;
+        padding: auto 0;
     }
 }
 
 
-.heroSection{
+.heroSection {
     background-color: #2b394d;
     display: flex;
     padding: 92px;
@@ -49,38 +49,45 @@ a{
     align-items: center;
 }
 
-.heroImage img{
+.heroImage img {
     border-radius: 87px;
     border: 3px double rgb(231, 225, 219);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
 
-.heroImage{
+.heroImage {
     width: 50%;
 }
 
 
-.softsols{
+.softsolsText1 {
     color: yellow;
-  
+}
+.softsolsText2 {
+    color: rgb(207, 129, 56);
 }
 
 
-.heroText{
+.heroText {
     width: 50%;
     padding: 32px;
     font-size: 1.1rem;
-    
-    & h1{
-    font-size: 48px;
-    font-weight: bolder;
-    margin-bottom: 16px;
+
+    & h1 {
+        font-size: 48px;
+        font-weight: bolder;
+        margin-bottom: 16px;
+    }
+
+    & p {
+        font-size: 1.1em;
     }
 }
 
 
-.heroText button{
+.heroText button {
     background-color: #1577b9;
     padding: 11px 18px;
     border-radius: 9px;
@@ -89,40 +96,51 @@ a{
     font-size: 0.9rem;
     border: none;
 
-    &:hover{
+    &:hover {
         background-color: #084d7a;
         cursor: pointer;
     }
 }
 
 
-.servicesSection{
+.servicesSection {
     background-color: rgb(203, 223, 223);
-    padding: 22px;
+    padding: 22px 0px;
     color: #1F2937;
     
 
-    & h1{
+    & h1 {
+        width: 100%;
+        padding: 22px;
         text-align: center;
-        margin-top: 1em;
-        font-size: 2.4em;
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        font-weight: 800;
+        font-style: overline;
+        background-color: rgb(200, 200, 200, 0.5);
+
+
+  
     }
 }
 
 
 
-.gigs{
+.gigs {
     padding: 30px 153px 94px;
     display: flex;
     justify-content: center;
-    
 
-    & p{
+
+    & p {
         text-align: center;
         width: 70%;
+        margin: 6px;
+        font-weight: 900;
+        font-size: 1em;
     }
 
-    & img{
+    & img {
         border-radius: 10px;
         border: 2px solid rgb(3, 3, 3);
     }
@@ -130,42 +148,47 @@ a{
 
 
 
-.gig{
+.gig {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+    font-size: 1.1rem;
 }
 
 
 .companyGoal {
     background-color: #084d7a;
     padding: 122px;
-    font-size: 2rem;
+    font-size: calc(0.75rem + 1.5vw);
     font-style: italic;
 
-    & h6{
+    & h6 {
         font-style: normal;
+        font-size: calc(0.75rem + 1.1vw);
         text-align: right;
     }
 }
 
 
-.actionCallSection{
+.actionCallSection {
     background-color: #ffffff;
     padding: 100px;
 
-    & .actionCall{
+    & .actionCall {
+        gap: 0.7rem;
         display: flex;
         background-color: #3882f6;
         padding: 58px 20px;
         justify-content: space-around;
         border-radius: 10px;
 
-        & h3{
+        & h3 {
             font-size: 1.5rem;
         }
-        & button{
+
+        & button {
             padding: 12px;
             border-radius: 10px;
             border: 2px solid white;
@@ -174,7 +197,7 @@ a{
             font-size: 1rem;
             font-weight: bold;
 
-            &:hover{
+            &:hover {
                 background-color: rgb(255, 255, 255);
                 color: black;
                 border: 2px solid black;
@@ -186,23 +209,23 @@ a{
 }
 
 
-.footer{
+.footer {
     padding: 35px;
     text-align: center;
 
-    & p{
+    & p {
         margin-bottom: 5px;
     }
 
-    & a{
+    & a {
         text-decoration: none;
         color: yellowgreen;
-        
-        
-        &:hover{
-        color: aquamarine;
-        background-color: inherit;
-        
+
+
+        &:hover {
+            color: aquamarine;
+            background-color: inherit;
+
         }
     }
 }
@@ -218,35 +241,35 @@ a{
 
 /* About page styling */
 
-.aboutSection{
+.aboutSection {
     padding: 90px 120px 10px;
     display: flex;
     gap: 55px;
     align-items: center;
     background-color: #1577b9;
 
-    & h1{
+    & h1 {
         font-size: 2.6rem;
         margin-bottom: 19px;
         color: yellow;
     }
 
-    & p{
+    & p {
         margin-bottom: 12px;
         font-size: 1.3rem;
     }
 
-    & img{
+    & img {
         border-radius: 15px;
     }
 }
 
 
-.aboutCall{
+.aboutCall {
     padding: 30px 120px;
     background-color: #1577b9;
-    
-    & button{
+
+    & button {
         font-size: 1.2rem;
         margin: 9px;
         padding: 12px;
@@ -255,8 +278,9 @@ a{
         font-weight: bold;
         border: 2px solid black;
 
-        &:hover{
-            background-color: #1577b9;;
+        &:hover {
+            background-color: #1577b9;
+            ;
             color: white;
             border: 2px solid white;
             cursor: pointer;
@@ -272,7 +296,7 @@ a{
 
 /* Services page styling */
 
-.heroImageServices{
+.heroImageServices {
     height: 35vh;
     background-color: rgb(241, 124, 144);
     display: flex;
@@ -283,7 +307,7 @@ a{
     font-weight: bold;
 }
 
-.orderServiceBtn{
+.orderServiceBtn {
     /* padding: 18px;
     border-radius: 8px;
     font-size: 1rem;
@@ -304,21 +328,21 @@ a{
     margin-top: 7px;
     margin-right: 9px;
 
-    &:hover{
+    &:hover {
         background-color: #0a3b5c;
         border: 1px solid white;
     }
 }
 
 
-.service{
+.service {
     display: flex;
     padding: 44px;
     align-items: center;
     gap: 42px;
     justify-content: space-between;
 
-    & p{
+    & p {
         font-size: 2.2rem;
         margin-bottom: 12px;
     }
@@ -328,16 +352,16 @@ a{
     }
 }
 
-.evenGig{
+.evenGig {
     background-color: #084d7a;
 }
 
-.heroImageServices .softsols{
+.heroImageServices .softsols {
     border: 2px solid black;
     padding: 6px;
 }
 
-.heroServices{
+.heroServices {
     text-decoration: underline;
 }
 
@@ -348,59 +372,61 @@ a{
 
 /* portfolio page styles */
 
-.portfolioLinks{
+.portfolioLinks {
     padding: 55px;
     display: flex;
     justify-content: space-evenly;
     background-color: #06253a;
 }
 
-.portfolioWorks{
+.portfolioWorks {
     /* border: 1px solid white; */
     padding: 55px;
 
-    & h2{
+    & h2 {
         font-size: 2.3rem;
         margin-bottom: 9px;
         color: yellow;
     }
 
-    & ul{
+    & ul {
         font-size: 1.5rem;
 
-        & li{
+        & li {
             margin: 16px;
-            & a{  
+
+            & a {
                 padding: 2px;
                 color: yellowgreen;
-                &:hover{
+
+                &:hover {
                     color: aquamarine;
                     background-color: inherit;
                 }
             }
-        }   
+        }
     }
 }
 
 
-.fa-youtube{
+.fa-youtube {
     color: red;
 }
 
-.fa-blogger{
+.fa-blogger {
     color: orange;
 }
 
-.fa-globe{
+.fa-globe {
     color: skyblue;
 }
 
-.fa-github{
+.fa-github {
     color: white;
 }
 
 
-.sampleVids{
+.sampleVids {
     padding: 26px;
     font-weight: bold;
     font-size: 2rem;
@@ -411,14 +437,14 @@ a{
         color: #fff;
         padding: 3px 16px;
         text-align: center;
-      }
+    }
 }
 
-.videoTags{
+.videoTags {
     display: flex;
     justify-content: space-evenly;
 
-    & iframe{
+    & iframe {
         padding: 12px;
     }
 }
@@ -431,13 +457,13 @@ a{
 
 /* contact page styles */
 
-.contact{
+.contact {
     background-color: #182833;
     padding: 100px;
     display: flex;
     justify-content: space-evenly;
 
-    & h2{
+    & h2 {
         font-size: 2.8rem;
         margin-bottom: 18px;
     }
@@ -445,10 +471,37 @@ a{
     & p {
         font-size: 3rem;
 
-        & a:hover{
+        & a:hover {
             color: green;
             background-color: #182833;
         }
     }
- 
+
+}
+
+
+
+
+
+
+
+/* making this website responsive  */
+
+@media only screen and (max-width: 800px) {
+    .heroSection, .servicesSection .gigs, .navbar, .actionCall{
+        flex-direction: column;
+    }
+    .heroText, .orderServiceBtn, .companyGoal{
+        text-align: center;
+    }
+    .heroText, .heroImage, .gig p {
+        width: 100%;
+    }
+    .navbar .navLinks{
+        flex-direction: column;
+        text-align: center;
+        & li{
+            margin: 12px;
+        }
+    }
 }
