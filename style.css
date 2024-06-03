@@ -49,6 +49,7 @@ a {
 
 
 .heroSection {
+    height: 100vh;
     background-color: #2b394d;
     display: flex;
     padding: 92px;
