@@ -7,6 +7,111 @@
     <link rel="stylesheet" href="../style.css">
     <title>Contact - Soft Solutions</title>
     <script src="https://kit.fontawesome.com/29fa006067.js" crossorigin="anonymous"></script>
+    <style>
+        form {
+            font-size: 1.5rem;
+            color: wheat;
+            width: 50%;
+        }
+
+        form div {
+            padding: 25px;
+        }
+
+        .admissionForm {
+            display: flex;
+            justify-content: center;
+        }
+
+        form > div {
+            padding: 15px;
+        }
+
+        form > div > label {
+            font-weight: 900;
+            margin-bottom: 9px;
+        }
+
+        legend {
+            background-color: yellowgreen;
+            color: black;
+            padding: 5px;
+            font-weight: 900;
+            border-radius: 13px;
+        }
+
+        .services input {
+            accent-color: green;
+            width: 25px;
+            height: 25px;
+        }
+
+        .services div {
+            display: flex;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .services label {
+            margin-left: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            vertical-align: top;
+            font-size: 1.6rem;
+        }
+
+        .userMessage{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            text-align: center;
+            padding: 23px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            height: 40px;
+            font-size: 1.6rem;
+            display: flex;
+        }
+
+        form > fieldset {
+            padding: 25px;
+            border-color: aquamarine;
+        }
+        
+        form > fieldset > div > fieldset {
+            padding: 25px;
+            border-color: greenyellow;
+        }
+
+        .btns input, .btns button{
+            width: 120px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .btns input:hover{
+            background-color: green;
+            color: white;
+        }
+
+        .btns button:hover{
+            background-color: red;
+            color: white;
+        }
+
+        .contact {
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,8 +133,71 @@
         <img src="../imgs/contact.jpg" alt="contact soft solutions" width="100%" height="400">
     </div>
 
+
+    <div class="admissionForm">
+        <form action="#" method="post">
+            <h1>Contact form</h1>
+            <fieldset>
+                <div>
+                    <label for="user_name">Name: </label>
+                    <input type="text" name="user_name" id="user_name" placeholder="John Smith">
+                </div>
+                <div>
+                    <label for="email">Email ID: </label>
+                    <input type="email" name="email_id" id="email" placeholder="you@example.com">
+                </div>
+
+                <div class="services">
+                    <fieldset>
+                    <legend>Required Services</legend>
+                    <div>
+                        <input type="checkbox" name="service" id="Web_development" value="Web_development">
+                        <label for="Web_development">Web development</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="python_coding" value="python_coding">
+                        <label for="python_coding">Python coding</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="thumbnails_design" value="thumbnails_design">
+                        <label for="thumbnails_design">Thumbnails design</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="YouTube_channel_SEO" value="YouTube_channel_SEO">
+                        <label for="YouTube_channel_SEO">YouTube channel SEO</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="Video_Editing" value="Video_Editing">
+                        <label for="Video_Editing">Video Editing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="Website_SEO" value="Website_SEO">
+                        <label for="Website_SEO">Website SEO</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="service" id="Data_Entry" value="Data_Entry">
+                        <label for="Data_Entry">Data Entry</label>
+                    </div>
+                </fieldset>
+                </div>
+
+                <div class="userMessage">
+                    <label for="userMessage">Message: </label>
+                    <textarea name="user_message" id="userMessage"></textarea>
+                </div>
+
+                <div class="btns">
+                    <input type="submit" value="Submit">
+                    <button type="reset">Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
+    
+
     <div class="contact">
-        
+    
         <div class="wa">
             <h2><i class="fa-brands fa-whatsapp"></i> WhatsApp</h2>
             <p><a href="https://wa.me/923369085972">+92-336-9085972</a></p>
@@ -45,7 +213,18 @@
         <p><a href="https://github.com/AbdurCodes/landing_page_TOP">To contribute to the development of this website, visit our Github repository.</a></p>
     </div>
 
-
+    <!-- <script>
+        let toggleBtn = document.getElementById('toggleBtn');
+        let form = document.getElementById('formElement');
+        toggleBtn.addEventListener('click', () => {
+            if (form.style.backgroundColor == 'aqua' || form.style.backgroundColor == '') {
+                form.style.backgroundColor = 'aquamarine';
+            }
+            else {
+                form.style.backgroundColor = 'aqua';
+            }
+        })
+    </script> -->
 
 </body>
 
