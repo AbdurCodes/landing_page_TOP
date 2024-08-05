@@ -11,7 +11,7 @@
         form {
             font-size: 1.5rem;
             color: wheat;
-            width: 50%;
+            width: 60%;
 
             & div {
                 padding: 25px;
@@ -58,7 +58,7 @@
             margin-top: 6px;
         }
 
-        .userMessage {
+        .userMessage, .additional {
             display: flex;
             flex-direction: column;
         }
@@ -77,6 +77,12 @@
             margin-top: 6px;
         }
 
+        #communication, #timeline, #budget{
+            width: 100%;
+            font-size: 1.6rem;
+            height: 40px;
+            margin-top: 6px;
+        }
 
         form>fieldset {
             padding: 25px;
@@ -115,6 +121,11 @@
             text-align: right;
             color: white;
         }
+
+        input:checked {
+            outline: 6px solid green;
+        }
+
     </style>
 </head>
 
@@ -139,7 +150,7 @@
 
     <div class="admissionForm">
         <form action="#" method="post">
-            <h1>Contact form</h1>
+            <h1>Help us serve you better</h1>
             <fieldset>
                 <p class="note">Note: Fields with asterix (*) are required.</p>
                 <div>
@@ -156,11 +167,11 @@
                         <legend>Required Service(s)</legend>
                         <div>
                             <input type="checkbox" name="service" id="Web_development" value="Web_development">
-                            <label for="Web_development">Web development</label>
+                            <label for="Web_development">Web app development</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="python_coding" value="python_coding">
-                            <label for="python_coding">Python coding</label>
+                            <label for="python_coding">Python coding tasks</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="thumbnails_design" value="thumbnails_design">
@@ -168,7 +179,7 @@
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="YouTube_channel_SEO" value="YouTube_channel_SEO">
-                            <label for="YouTube_channel_SEO">YouTube channel SEO</label>
+                            <label for="YouTube_channel_SEO">YouTube channel management</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="Video_Editing" value="Video_Editing">
@@ -176,7 +187,7 @@
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="Website_SEO" value="Website_SEO">
-                            <label for="Website_SEO">Website SEO</label>
+                            <label for="Website_SEO">Website SEO services</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="Data_Entry" value="Data_Entry">
@@ -185,9 +196,44 @@
                     </fieldset>
                 </div>
 
+                <div>
+                    <label for="communication">What is your preferred method of communication?</label><br>
+                    <select name="communicationMethod" id="communication">
+                        <option value="phone">Phone</option>
+                        <option value="email">Email</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="skype">Skype</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="timeline">What is your project timeline?</label><br>
+                    <select name="timeline" id="timeline">
+                        <option value="immediate">Immediate</option>
+                        <option value="onetwoweeks">1-2 weeks</option>
+                        <option value="onemonth">1 month</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="budget">What is your budget range for this project?</label><br>
+                    <select name="budget" id="budget">
+                        <option value="under500">Under $500</option>
+                        <option value="five00to1000">$500 - $1000</option>
+                        <option value="one000to2000">$1000 - $2000</option>
+                        <option value="above2000">Above $2000</option>
+                    </select>
+                </div>
+
                 <div class="userMessage">
-                    <label for="userMessage">Message (optional): </label>
+                    <label for="userMessage">Please describe your project in detail:</label>
                     <textarea name="user_message" id="userMessage" title="It is optional to fill this field"></textarea>
+                </div>
+
+                <div class="additional">
+                    <label for="additional">Additional questions or comments:</label>
+                    <textarea name="additional" id="additional" placeholder="Enter any additional questions or comments..."></textarea>
                 </div>
 
                 <div class="btns">
