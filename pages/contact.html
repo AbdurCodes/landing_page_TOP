@@ -114,7 +114,12 @@
 
         .contact {
             margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            align-items: center;
         }
+
 
         .note {
             font-size: 0.9rem;
@@ -149,7 +154,7 @@
 
 
     <div class="admissionForm">
-        <form action="#" method="post">
+        <form action="#" method="post" onsubmit="return validateCheckboxes();">
             <h1>Help us serve you better</h1>
             <fieldset>
                 <p class="note">Note: Fields with asterix (*) are required.</p>
@@ -164,7 +169,7 @@
 
                 <div class="services">
                     <fieldset>
-                        <legend>Required Service(s)</legend>
+                        <legend>Required Service(s) <span aria-label="required" title="required">*</span></legend>
                         <div>
                             <input type="checkbox" name="service" id="Web_development" value="Web_development">
                             <label for="Web_development">Web app development</label>
@@ -197,8 +202,9 @@
                 </div>
 
                 <div>
-                    <label for="communication">What is your preferred method of communication?</label><br>
-                    <select name="communicationMethod" id="communication">
+                    <label for="communication">What is your preferred method of communication? <span aria-label="required" title="required">*</span></label><br>
+                    <select name="communicationMethod" id="communication" required>
+                        <option value="" disabled selected>Select your option</option>
                         <option value="phone">Phone</option>
                         <option value="email">Email</option>
                         <option value="whatsapp">WhatsApp</option>
@@ -207,8 +213,9 @@
                 </div>
 
                 <div>
-                    <label for="timeline">What is your project timeline?</label><br>
-                    <select name="timeline" id="timeline">
+                    <label for="timeline">What is your project timeline? <span aria-label="required" title="required">*</span></label><br>
+                    <select name="timeline" id="timeline" required>
+                        <option value="" disabled selected>Select your option</option>
                         <option value="immediate">Immediate</option>
                         <option value="onetwoweeks">1-2 weeks</option>
                         <option value="onemonth">1 month</option>
@@ -217,22 +224,23 @@
                 </div>
 
                 <div>
-                    <label for="budget">What is your budget range for this project?</label><br>
-                    <select name="budget" id="budget">
+                    <label for="budget">What is your budget range for this project? <span aria-label="required" title="required">*</span></label><br>
+                    <select name="budget" id="budget" required>
+                        <option value="" disabled selected>Select your option</option>
                         <option value="under500">Under $500</option>
-                        <option value="five00to1000">$500 - $1000</option>
-                        <option value="one000to2000">$1000 - $2000</option>
-                        <option value="above2000">Above $2000</option>
+                        <option value="five00to1000">$500 - $1500</option>
+                        <option value="one000to2000">$1500 - $3000</option>
+                        <option value="above2000">Above $3000</option>
                     </select>
                 </div>
 
                 <div class="userMessage">
-                    <label for="userMessage">Please describe your project in detail:</label>
-                    <textarea name="user_message" id="userMessage" title="It is optional to fill this field"></textarea>
+                    <label for="userMessage">Please describe your project in detail: <span aria-label="required" title="required">*</span></label>
+                    <textarea name="user_message" id="userMessage" required></textarea>
                 </div>
 
                 <div class="additional">
-                    <label for="additional">Additional questions or comments:</label>
+                    <label for="additional">Additional questions or comments: (Optional)</label>
                     <textarea name="additional" id="additional" placeholder="Enter any additional questions or comments..."></textarea>
                 </div>
 
@@ -248,12 +256,16 @@
 
     <div class="contact">
         <div class="wa">
-            <h2><i class="fa-brands fa-whatsapp"></i> WhatsApp</h2>
+            <h2><i class="fa-brands fa-whatsapp"></i> WhatsApp number</h2>
             <p><a href="https://wa.me/923369085972">+92-336-9085972</a></p>
         </div>
         <div class="email">
             <h2><i class="fa-solid fa-envelope"></i> Email address</h2>
             <p><a href="mailto:aravman@gmail.com">aravman@gmail.com</a></p>
+        </div>
+        <div class="skype">
+            <h2><i class="fa-brands fa-skype"></i> Skype meeting link </h2>
+            <p><a href="https://join.skype.com/uMhzWqcglmqp">Join the Skype meeting</a></p>
         </div>
     </div>
 
@@ -263,6 +275,28 @@
         <p><a href="https://github.com/AbdurCodes/landing_page_TOP">To contribute to the development of this website,
                 visit our Github repository.</a></p>
     </div>
+
+
+
+
+
+
+
+
+
+    <!-- JS -->
+     <script>
+        function validateCheckboxes() {
+            let checkboxs = document.querySelectorAll('input[type="checkbox"]');
+            for (let checkbox of checkboxs) {
+                if (checkbox.checked) {
+                    return true;
+                }
+            }
+            alert("Plz choose at least one service!");
+            return false;
+        }
+     </script>
 
 </body>
 
