@@ -127,9 +127,6 @@ a {
         font-weight: 800;
         font-style: overline;
         background-color: rgb(200, 200, 200, 0.5);
-
-
-
     }
 }
 
@@ -492,7 +489,9 @@ a {
 }
 
 
-
+.fa-phone{
+    color: white;
+}
 
 
 
