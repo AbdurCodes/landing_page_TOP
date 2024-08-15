@@ -42,7 +42,7 @@
             display: flex;
             padding: 10px;
             margin-left: 10px;
-            
+
 
             & label {
                 margin-left: 20px;
@@ -58,7 +58,8 @@
             margin-top: 6px;
         }
 
-        .userMessage, .additional {
+        .userMessage,
+        .additional {
             display: flex;
             flex-direction: column;
         }
@@ -77,7 +78,9 @@
             margin-top: 6px;
         }
 
-        #communication, #timeline, #budget{
+        #communication,
+        #timeline,
+        #budget {
             width: 100%;
             font-size: 1.6rem;
             height: 40px;
@@ -114,10 +117,10 @@
 
         .contact {
             margin-top: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 42px;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+
         }
 
 
@@ -131,6 +134,9 @@
             outline: 6px solid green;
         }
 
+        .fa-phone{
+            color: white;
+        }
     </style>
 </head>
 
@@ -143,7 +149,7 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./portfolio.html">Portfolio</a></li>
                 <li><a href="./services.html">Services</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="tel:+923369085972"><i class="fa-solid fa-phone"></i> +92-336-9085972</a></li>
             </div>
         </ul>
     </nav>
@@ -202,7 +208,8 @@
                 </div>
 
                 <div>
-                    <label for="communication">What is your preferred method of communication? <span aria-label="required" title="required">*</span></label><br>
+                    <label for="communication">What is your preferred method of communication? <span
+                            aria-label="required" title="required">*</span></label><br>
                     <select name="communicationMethod" id="communication" required>
                         <option value="" disabled selected>Select your option</option>
                         <option value="phone">Phone</option>
@@ -213,7 +220,8 @@
                 </div>
 
                 <div>
-                    <label for="timeline">What is your project timeline? <span aria-label="required" title="required">*</span></label><br>
+                    <label for="timeline">What is your project timeline? <span aria-label="required"
+                            title="required">*</span></label><br>
                     <select name="timeline" id="timeline" required>
                         <option value="" disabled selected>Select your option</option>
                         <option value="immediate">Immediate</option>
@@ -224,7 +232,8 @@
                 </div>
 
                 <div>
-                    <label for="budget">What is your budget range for this project? <span aria-label="required" title="required">*</span></label><br>
+                    <label for="budget">What is your budget range for this project? <span aria-label="required"
+                            title="required">*</span></label><br>
                     <select name="budget" id="budget" required>
                         <option value="" disabled selected>Select your option</option>
                         <option value="under500">Under $500</option>
@@ -235,13 +244,15 @@
                 </div>
 
                 <div class="userMessage">
-                    <label for="userMessage">Please describe your project in detail: <span aria-label="required" title="required">*</span></label>
+                    <label for="userMessage">Please describe your project in detail: <span aria-label="required"
+                            title="required">*</span></label>
                     <textarea name="user_message" id="userMessage" required></textarea>
                 </div>
 
                 <div class="additional">
                     <label for="additional">Additional questions or comments: (Optional)</label>
-                    <textarea name="additional" id="additional" placeholder="Enter any additional questions or comments..."></textarea>
+                    <textarea name="additional" id="additional"
+                        placeholder="Enter any additional questions or comments..."></textarea>
                 </div>
 
                 <div class="btns">
@@ -255,6 +266,10 @@
 
 
     <div class="contact">
+        <div class="phone">
+            <h2><i class="fa-solid fa-phone"></i> Phone number</h2>
+            <p><a href="tel:+923369085972">+92-336-9085972</a></p>
+        </div>
         <div class="wa">
             <h2><i class="fa-brands fa-whatsapp"></i> WhatsApp number</h2>
             <p><a href="https://wa.me/923369085972">+92-336-9085972</a></p>
@@ -265,7 +280,7 @@
         </div>
         <div class="skype">
             <h2><i class="fa-brands fa-skype"></i> Skype meeting link </h2>
-            <p><a href="https://join.skype.com/uMhzWqcglmqp">Join the Skype meeting</a></p>
+            <p><a href="https://join.skype.com/invite/zigDfqhBoEmE">Join the Skype meeting</a></p>
         </div>
     </div>
 
@@ -285,7 +300,7 @@
 
 
     <!-- JS -->
-     <script>
+    <script>
         function validateCheckboxes() {
             let checkboxs = document.querySelectorAll('input[type="checkbox"]');
             for (let checkbox of checkboxs) {
@@ -296,7 +311,7 @@
             alert("Plz choose at least one service!");
             return false;
         }
-     </script>
+    </script>
 
 </body>
 
