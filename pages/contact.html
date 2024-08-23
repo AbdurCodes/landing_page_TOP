@@ -23,8 +23,16 @@
             justify-content: center;
         }
 
-        legend {
+        .legend {
             background-color: yellowgreen;
+            color: black;
+            padding: 9px;
+            font-weight: 900;
+            border-radius: 13px;
+        }
+
+        .legendInvalid {
+            background-color: rgb(255, 160, 160);
             color: black;
             padding: 9px;
             font-weight: 900;
@@ -92,18 +100,17 @@
             border-color: aquamarine;
         }
 
-        form>fieldset>div>fieldset {
+        .checkboxFieldset {
             padding: 25px;
             border-color: greenyellow;
         }
 
-        .btns input,
-        .btns button {
-            width: 120px;
-            height: 40px;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .checkboxFieldsetInvalid {
+            padding: 25px;
+            border-color: rgb(255, 160, 160);
         }
+
+        
 
         .btns input:hover {
             background-color: green;
@@ -134,7 +141,46 @@
             outline: 6px solid green;
         }
 
-        
+        input:invalid,
+        textarea:invalid,
+        select:invalid {
+            background-color: rgb(255, 160, 160);
+        }
+
+        input:valid,
+        textarea:valid,
+        select:valid {
+            background-color: rgb(199, 245, 129);
+        }
+
+
+        .btns {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btns input,
+        .btns button {
+            width: 180px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        .btns input {
+            background-color: rgb(167, 252, 63);
+        }
+
+        .btns button {
+            background-color: rgb(243, 89, 89);
+        }
+
+        .missingField, #emailError {
+            color: palevioletred;
+        }
+
+
     </style>
 </head>
 
@@ -156,9 +202,8 @@
         <img src="../imgs/contact.jpg" alt="contact soft solutions" width="100%" height="400">
     </div>
 
-
     <div class="admissionForm">
-        <form action="#" method="post" onsubmit="return validateCheckboxes();">
+        <form action="" method="get" onsubmit="return validateCheckboxes();" id="contactForm">
             <h1>Help us serve you better</h1>
             <fieldset>
                 <p class="note">Note: Fields with asterix (*) are required.</p>
@@ -169,18 +214,24 @@
                 <div>
                     <label for="email">Email ID: <span aria-label="required" title="required">*</span></label>
                     <input type="email" name="email_id" id="email" placeholder="you@example.com" required>
+                    
                 </div>
 
                 <div class="services">
-                    <fieldset>
-                        <legend>Required Service(s) <span aria-label="required" title="required">*</span></legend>
+                    <fieldset class="checkboxFieldsetInvalid">
+                        <legend class="legendInvalid">Required Service(s) <span aria-label="required"
+                                title="required">*</span></legend>
                         <div>
                             <input type="checkbox" name="service" id="Web_development" value="Web_development">
-                            <label for="Web_development">Web app development</label>
+                            <label for="Web_development">Website / Web App development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="service" id="wordpress" value="wordpress">
+                            <label for="wordpress">Ecommerce / Wordpress development</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="python_coding" value="python_coding">
-                            <label for="python_coding">Python coding tasks</label>
+                            <label for="python_coding">Python coding</label>
                         </div>
                         <div>
                             <input type="checkbox" name="service" id="thumbnails_design" value="thumbnails_design">
@@ -257,6 +308,8 @@
                     <input type="submit" value="Submit">
                     <button type="reset">Reset</button>
                 </div>
+                <p class="missingField"></p>
+                <span id="emailError"></span>
             </fieldset>
         </form>
     </div>
@@ -299,16 +352,53 @@
 
     <!-- JS -->
     <script>
+
+        let missingField = document.querySelector('.missingField');
+        let checkboxFieldset = document.querySelector('.checkboxFieldsetInvalid');
+        let legend = document.querySelector('.legendInvalid');
+        let checkboxAll = document.querySelectorAll('input[type="checkbox"]');
+
+        Array.from(checkboxAll).forEach(singleCheckbox => {
+            singleCheckbox.addEventListener('change', () => {
+                if (Array.from(checkboxAll).some(checkbox => checkbox.checked)) {
+                    checkboxFieldset.classList.remove('checkboxFieldsetInvalid');
+                    legend.classList.remove('legendInvalid');
+                    checkboxFieldset.classList.add('checkboxFieldset');
+                    legend.classList.add('legend');
+                }
+                else {
+                    checkboxFieldset.classList.remove('checkboxFieldset');
+                    legend.classList.remove('legend');
+                    checkboxFieldset.classList.add('checkboxFieldsetInvalid');
+                    legend.classList.add('legendInvalid');
+                }
+            })
+        })
+
         function validateCheckboxes() {
-            let checkboxs = document.querySelectorAll('input[type="checkbox"]');
-            for (let checkbox of checkboxs) {
+
+            var emailInput = document.getElementById('email');
+            var emailError = document.getElementById('emailError');
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.textContent = '* Please enter a valid email address!';
+                event.preventDefault();
+            } else {
+                emailError.textContent = '';
+            }
+
+
+            for (let checkbox of checkboxAll) {
                 if (checkbox.checked) {
+                    missingField.textContent = "";
                     return true;
                 }
             }
-            alert("Plz choose at least one service!");
+            missingField.textContent = "* Plz choose at least one service!";
             return false;
         }
+
     </script>
 
 </body>

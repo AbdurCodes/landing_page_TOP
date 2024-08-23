@@ -489,9 +489,19 @@ a {
 }
 
 
+
+
+
+
+
+
+/* font awesome icons styling */
+
 .fa-phone{
     color: white;
 }
+
+
 
 
 
@@ -519,6 +529,10 @@ a {
         width: 100%;
     }
 
+    nav {
+        position: static;
+    }
+
     .navbar .navLinks {
         flex-direction: column;
         text-align: center;
@@ -528,3 +542,4 @@ a {
         }
     }
 }
+
