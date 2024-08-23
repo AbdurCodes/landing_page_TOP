@@ -356,6 +356,7 @@ a {
 
     & img {
         border-radius: 16px;
+        border: 3px solid yellowgreen;
     }
 }
 
