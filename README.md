@@ -1,1 +1,1 @@
-Originally assignment about Landing page design for The Odin Project. Then transformed into a portfolio website for budding tech company called Soft Sols.
+A work-in-progress assignment website for a demo software house that offers various services online.
